@@ -60,6 +60,9 @@ export class LogseqService {
   }
 
   private async clean() {
+    if (!this.settings.namespace) {
+      return;
+    }
     const webpages = await logseq.Editor.getPagesFromNamespace(
       this.settings.namespace
     );
