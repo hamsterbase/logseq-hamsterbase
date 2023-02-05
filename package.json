@@ -1,18 +1,26 @@
 {
   "name": "logseq-hamsterbase",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.html",
   "repository": "git@github.com:hamsterbase/logseq-hamsterbase.git",
   "author": "monster <monster@hamsterbase.com>",
   "license": "MIT",
   "scripts": {
-    "build": "node script/build.mjs"
+    "dev": "node script/dev.mjs",
+    "build": "node script/build.mjs",
+    "cov": "vitest run --coverage"
   },
   "devDependencies": {
+    "@hamsterbase/sdk": "^0.1.4",
+    "@logseq/libs": "^0.0.14",
+    "@vitest/coverage-istanbul": "^0.24.5",
+    "crypto-js": "^4.1.1",
     "esbuild": "^0.17.5",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.4",
+    "uuid": "^9.0.0",
+    "vitest": "^0.28.4"
   },
-  "dependencies": {
-    "@hamsterbase/sdk": "^0.1.4"
+  "logseq": {
+    "id": "_3je9fvx16"
   }
 }

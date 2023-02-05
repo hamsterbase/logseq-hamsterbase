@@ -1,0 +1,30 @@
+// Vitest Snapshot v1
+
+exports[` > default-template 1`] = `
+"[
+  {
+    \\"content\\": \\"## metadata\\",
+    \\"children\\": [
+      {
+        \\"content\\": \\"title: Don’t think to write, write to think - Herbert Lui\\",
+        \\"children\\": []
+      },
+      {
+        \\"content\\": \\"link: https://herbertlui.net/dont-think-to-write-write-to-think/\\",
+        \\"children\\": []
+      }
+    ]
+  },
+  {
+    \\"content\\": \\"## highlights\\",
+    \\"children\\": [
+      {
+        \\"content\\": \\"> Writing is not the artifact of thinking, it’s the actual thinking process. \\\\n \\",
+        \\"properties\\": {
+          \\"id\\": \\"3ae86c9f-61c6-50f9-a0c0-ef770ac0b4e6\\"
+        }
+      }
+    ]
+  }
+]"
+`;

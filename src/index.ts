@@ -1,9 +1,12 @@
-import { HamsterBase } from "@hamsterbase/sdk";
+import "@logseq/libs";
+import { HighlightsSyncService } from "./highlightsService";
+import { LogseqService } from "./logseq";
+import { settingSchema } from "./settings";
 
-const hamsterbase = new HamsterBase({
-  endpoint: "endpoint",
-  token: "token",
-  requestLib: fetch,
-});
+const highlightsSyncService = new HighlightsSyncService();
 
-console.log(hamsterbase);
+const logseqService = new LogseqService(highlightsSyncService);
+
+logseq.useSettingsSchema(settingSchema).ready(logseqService.init);
+
+logseq.onSettingsChanged(logseqService.init);
