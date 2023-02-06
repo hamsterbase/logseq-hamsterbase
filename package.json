@@ -1,6 +1,6 @@
 {
   "name": "logseq-hamsterbase",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.html",
   "repository": "git@github.com:hamsterbase/logseq-hamsterbase.git",
   "description": "Official Hamsterbase -> Logseq integration.",
