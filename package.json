@@ -1,8 +1,9 @@
 {
   "name": "logseq-hamsterbase",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.html",
   "repository": "git@github.com:hamsterbase/logseq-hamsterbase.git",
+  "description": "Official Hamsterbase -> Logseq integration.",
   "author": "monster <monster@hamsterbase.com>",
   "license": "MIT",
   "scripts": {
@@ -11,7 +12,7 @@
     "cov": "vitest run --coverage"
   },
   "devDependencies": {
-    "@hamsterbase/sdk": "^0.1.4",
+    "@hamsterbase/sdk": "^0.1.6",
     "@logseq/libs": "^0.0.14",
     "@vitest/coverage-istanbul": "^0.24.5",
     "crypto-js": "^4.1.1",
@@ -21,6 +22,7 @@
     "vitest": "^0.28.4"
   },
   "logseq": {
-    "id": "_3je9fvx16"
+    "icon": "./icon.png",
+    "id": "logseq-hamsterbase-official-plugin"
   }
 }

@@ -90,7 +90,7 @@ export const defaultTemplate = [
         content: "`{{highlights}}`",
         children: [
           {
-            content: "> `{{highlight.text}}` \n `{{highlight.note}}`",
+            content: "> `{{highlight.text}}` \n\n `{{highlight.note}}`",
           },
         ],
       },
