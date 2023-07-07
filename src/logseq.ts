@@ -89,17 +89,15 @@ export async function createWebpage(
   template: Block[],
   namespace: string
 ) {
-  const templateHash = md5(
-    createWebpage.toString() + JSON.stringify(template, null, 2)
-  ).toString();
-
+  const blocks = formatBlock(webpage, template);
+  const documentHash = md5(JSON.stringify(blocks, null, 2)).toString();
   const pageName = namespace + "/" + webpage.title.replace(/\//g, "\\");
   const page = await logseq.Editor.getPage(pageName);
 
   if (page) {
     if (
       webpage.id !== page.properties?.hamsterbaseId ||
-      templateHash !== page.properties?.templateHash
+      documentHash !== page.properties?.documentHash
     ) {
       await logseq.Editor.deletePage(pageName);
     } else {
@@ -110,12 +108,11 @@ export async function createWebpage(
     pageName,
     {
       hamsterbaseId: webpage.id,
-      templateHash,
+      documentHash,
     },
     { redirect: false, createFirstBlock: false }
   );
 
-  const blocks = formatBlock(webpage, template);
   const first = (await logseq.Editor.getPageBlocksTree(pageName))[0].uuid;
 
   await logseq.Editor.insertBatchBlock(first, blocks, {
