@@ -1,5 +1,7 @@
 # hamsterbase official logseq extension
 
+[Submit an Issue](https://github.com/hamsterbase/hamsterbase/issues) | [中文反馈](https://support.qq.com/product/594778)
+
 This plugin will help you sync [hamsterbase](https://hamsterbase.com) highlights to logseq
 
 ## How to use
